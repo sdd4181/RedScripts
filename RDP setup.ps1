@@ -3,3 +3,5 @@ Write-Output $password
 New-LocalUser "AdminScoring" -Password $password -FullName "Scoring Account" -Description "Scoring Acc."
 Add-LocalGroupMember -Group "Administrators" -Member "AdminScoring"
 Add-LocalGroupMember -Group "Remote Desktop Users" -Member "AdminScoring"
+reg add 'HKLM\System\CurrentControlSet\Control\Terminal Server' /v fDenyTSConnections /d 0 /f
+netsh advfirewall firewall set rule group="remote desktop" new enable=Yes
