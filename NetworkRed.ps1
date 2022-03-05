@@ -4,4 +4,4 @@ reg ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v Prompt
 #enables all rules
 netsh advfirewall set allprofiles firewallpolicy blockinbound,blockoutbound
 netsh advfirewall firewall delete rule all
-netsh advfirewall reset
+#netsh advfirewall reset
